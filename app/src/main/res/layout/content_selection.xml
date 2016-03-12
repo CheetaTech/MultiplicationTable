@@ -20,12 +20,24 @@
             android:text=""
             android:visibility="invisible"
          />
+        <ImageButton
+            android:id="@+id/buttonLearn"
+            android:layout_width="212dp"
+            android:layout_height="match_parent"
+            android:text="Learn"
+            android:background="@drawable/buton_custom"
+            />
+        <!--
         <Button
             android:id="@+id/buttonLearn"
             android:layout_width="212dp"
             android:layout_height="match_parent"
             android:text="Learn"
             />
+
+        -->
+
+
         <Button
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -67,7 +79,7 @@
             android:id="@+id/buttonTrain"
             android:layout_width="212dp"
             android:layout_height="match_parent"
-            android:text="Learn"
+            android:text="Train"
             />
         <Button
             android:layout_width="match_parent"
