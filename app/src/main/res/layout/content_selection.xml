@@ -4,49 +4,22 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent" >
 
-
     <LinearLayout
         android:id="@+id/learnLinearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/mainLinear"
-        android:weightSum="0"
         android:orientation="horizontal"
+        android:gravity="center"
         >
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text=""
-            android:visibility="invisible"
-         />
-        <ImageButton
-            android:id="@+id/buttonLearn"
-            android:layout_width="212dp"
-            android:layout_height="match_parent"
-            android:text="Learn"
-            android:background="@drawable/buton_custom"
-            />
-        <!--
+
         <Button
             android:id="@+id/buttonLearn"
             android:layout_width="212dp"
             android:layout_height="match_parent"
             android:text="Learn"
-            />
-
-        -->
-
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text=""
-            android:layout_gravity="center_vertical"
-            android:layout_weight=".3"
-            android:visibility="invisible"
-            />
-
+            android:background="@drawable/buton_selector">
+        </Button>
     </LinearLayout>
 
     <!-- Orta noktayı bulmaktadır.  -->
@@ -65,31 +38,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/mainLinear"
-        android:weightSum="0"
         android:orientation="horizontal"
+        android:gravity="center"
         >
-        <Button
-
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text=""
-            android:visibility="invisible"
-            />
         <Button
             android:id="@+id/buttonTrain"
             android:layout_width="212dp"
             android:layout_height="match_parent"
-            android:text="Train"
-            />
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text=""
-            android:layout_gravity="center_vertical"
-            android:layout_weight=".3"
-            android:visibility="invisible"
-            />
-
+            android:text="Learn"
+            android:background="@drawable/buton_selector">
+        </Button>
     </LinearLayout>
 
 
