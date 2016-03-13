@@ -9,4 +9,16 @@
     <string name="title_activity_ma">MaActivity</string>
     <string name="learn">Learn</string>
     <string name="train">Train</string>
+    <string name="x1">X1</string>
+    <string name="x2">X2</string>
+    <string name="x3">X3</string>
+    <string name="x4">X4</string>
+    <string name="x5">X5</string>
+    <string name="x6">X6</string>
+    <string name="x7">X7</string>
+    <string name="x8">X8</string>
+    <string name="x9">X9</string>
+    <string name="x10">X10</string>
+    <string name="back">Back</string>
+    <string name="start">Start</string>
 </resources>
