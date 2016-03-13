@@ -6,4 +6,7 @@
     <string name="title_activity_learn">LearnActivity</string>
     <string name="title_activity_train_select">TrainSelectActivity</string>
     <string name="title_activity_training">TrainingActivity</string>
+    <string name="title_activity_ma">MaActivity</string>
+    <string name="learn">Learn</string>
+    <string name="train">Train</string>
 </resources>
