@@ -185,7 +185,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/x2"
+            android:text="@string/x10"
             android:layout_weight="1"
             android:id="@+id/buttonX10"
             />
