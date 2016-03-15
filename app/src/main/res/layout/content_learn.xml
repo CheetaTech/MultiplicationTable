@@ -63,6 +63,18 @@
 
             android:id="@+id/buttonX3"
             />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/x4"
+            android:id="@+id/buttonX4"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/x5"
+            android:id="@+id/buttonX5"
+            />
 
     </LinearLayout>
     <Space
@@ -81,36 +93,9 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/x4"
-            android:id="@+id/buttonX4"
-            />
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/x5"
-            android:id="@+id/buttonX5"
-            />
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:text="@string/x6"
             android:id="@+id/buttonX6"
             />
-
-
-    </LinearLayout>
-    <Space
-        android:layout_below="@+id/secondLineLinearLayout"
-        android:id="@+id/space2"
-        android:layout_width="match_parent"
-        android:layout_height="1dp" />
-    <LinearLayout
-        android:id="@+id/thirdLineLinearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/space2"
-        android:gravity="center"
-        android:orientation="horizontal">
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -130,31 +115,6 @@
             android:id="@+id/buttonX9"
             />
 
-    </LinearLayout>
-
-    <Space
-        android:layout_below="@+id/thirdLineLinearLayout"
-        android:id="@+id/space3"
-        android:layout_width="match_parent"
-        android:layout_height="1dp" />
-    <LinearLayout
-        android:id="@+id/fourthLineLinearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/space3"
-        android:gravity="center"
-        android:orientation="horizontal">
-
-        <!--
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/back"
-            android:layout_weight="1"
-            android:textAllCaps="false"
-            android:id="@+id/buttonBack"
-            />
-        -->
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -163,36 +123,17 @@
 
             android:layout_centerInParent="true"
             />
-        <!--
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/start"
-            android:id="@+id/buttonStart"
-            android:textAllCaps="false"
-            android:layout_weight="1"
-            />
-            -->
-
     </LinearLayout>
-    
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/fourthLineLinearLayout"
+        android:layout_below="@+id/secondLineLinearLayout"
         >
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
-            />
-
+            android:src="@drawable/ikiler"/>
 
     </LinearLayout>
-
-
-
-
-
-
 </RelativeLayout>

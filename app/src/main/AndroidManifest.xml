@@ -10,7 +10,7 @@
         android:theme="@style/AppTheme">
 
         <activity
-            android:name=".LearnActivity"
+            android:name=".TrainingActivity"
             android:label="@string/title_activity_selection"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
