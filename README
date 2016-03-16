@@ -1,2 +1,12 @@
 This project is a private commercial project. This codes only using FireEwe inc.
+Proje Açıklamaları;
+* Layoutlar kullanılarak tasarımlar gerçeklenmeye çalışıldı.
+* Training bölümü kaldı ve Splash ekranı bölümü kaldı.
+* Geliştirmek istediğiniz de indirebilirsiniz. ve kendinize ait branch ı secebilirsiniz.
+git fetch && git checkout eko gibi.
+Yükleme yaparkende kendi branchınızı kullanınız.
+git push -u origin eko
+gibi.
+
+Kolay gelsin...
 
