@@ -8,12 +8,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.WindowManager;
 
-public class TrainingActivity extends AppCompatActivity {
+public class WorkActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.content_training);
+        setContentView(R.layout.content_work);
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);
     }
 
