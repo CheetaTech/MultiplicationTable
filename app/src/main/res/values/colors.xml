@@ -9,7 +9,10 @@
     <color name="white">#FFFFFF</color>
     <color name="medium_grey_color">#5e5e5e</color>
     <color name="turkuaz">#30D5C8</color>
+<<<<<<< HEAD
     <color name="purple_org">#800080</color>
     <color name="pink_org">#ff1493</color>
     <color name="orange_org">#ffa500</color>
+=======
+>>>>>>> 7fe8ca26e4038e4060ba6372f2506ea139c88404
 </resources>
