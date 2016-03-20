@@ -9,7 +9,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".TrainSelectActivity"
+            android:name=".SelectionActivity"
             android:label="@string/title_activity_selection"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -18,6 +18,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".TrainingActivity"
+            android:label="@string/title_activity_training"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".TrainSelectActivity"
+            android:label="@string/title_activity_train_select"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".LearnActivity"
+            android:label="@string/title_activity_learn"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
 
     </application>
 
