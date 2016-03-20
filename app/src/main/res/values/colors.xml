@@ -34,4 +34,6 @@
     <color name="orange_sample2">#ff4800</color>
     <color name="green_sample2">#00FF00</color>
     <color name="turkuaz_sample1">#00CED1</color>
+    <color name="background_yellow">#8B6914</color>
+    <color name="background_yellow2">#8B7500</color>
 </resources>

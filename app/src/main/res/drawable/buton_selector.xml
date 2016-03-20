@@ -2,7 +2,8 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:state_pressed="true"
         android:drawable="@drawable/buton_pressed" /> <!-- pressed -->
-    <item android:state_focused="true"
-        android:drawable="@drawable/buton_custom" /> <!-- focused -->
-    <item android:drawable="@drawable/buton_custom" /> <!-- default -->
+    <item android:state_checked="true"
+        android:drawable="@drawable/buton_custom" />
+    <item android:state_checked="false"
+        android:drawable="@drawable/buton_pressed"/>
 </selector>

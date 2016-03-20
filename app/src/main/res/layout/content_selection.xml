@@ -2,7 +2,9 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/relativeLayout1"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent" >
+    android:layout_height="fill_parent"
+    android:background="@color/turkuaz"
+    >
 
     <LinearLayout
         android:id="@+id/learnLinearLayout"
@@ -18,7 +20,7 @@
             android:layout_width="212dp"
             android:layout_height="match_parent"
             android:text="@string/learn"
-            android:background="@drawable/buton_selector"
+            android:background="@drawable/button_custom_learn_selector_pink"
             android:textStyle="bold"
             android:textAllCaps="false"
             android:textSize="40dip"
@@ -55,7 +57,7 @@
             android:textAllCaps="false"
             android:textSize="40dip"
             android:textColor="@android:color/white"
-            android:background="@drawable/buton_selector">
+            android:background="@drawable/button_custom_learn_selector_pink">
         </Button>
     </LinearLayout>
 

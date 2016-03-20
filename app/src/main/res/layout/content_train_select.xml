@@ -2,7 +2,9 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/relativeLayout1"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent" >
+    android:layout_height="fill_parent"
+    android:background="@color/turkuaz"
+    >
 
     <LinearLayout
         android:id="@+id/trainingLinearLayout"
@@ -18,9 +20,9 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="@string/train"
-            android:textColor="@android:color/holo_blue_dark"
+            android:textColor="@color/pink_org"
             android:layout_marginTop="10dp"
-            android:textSize="60dip"
+            android:textSize="80sp"
             android:textStyle="bold"
             android:id="@+id/trainingText" />
 
@@ -67,28 +69,83 @@
         android:layout_below="@+id/spaceLinearLayout"
         android:orientation="horizontal">
 
+        <ToggleButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOn="@string/x1"
+            android:textOff="@string/x1"
+            android:checked="true"
+            android:background="@drawable/buton_selector"
+            android:layout_weight="1"
+            android:textColor="@color/orange_org"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            />
+        <!--
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/x1"
             android:id="@+id/buttonX1"
+            android:background="@drawable/buton_selector"
+            android:textColor="@color/orange_org"
+            android:textStyle="bold"
+            android:textSize="25sp"
             />
+        -->
+        <!--
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/x2"
             android:id="@+id/buttonX2"
+            android:background="@drawable/button_custom_learn_selector_pink"
+            android:textColor="@color/green_sample2"
+            android:textStyle="bold"
+            android:textSize="25sp"
             />
+            -->
+
+        <ToggleButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOn="@string/x2"
+            android:textOff="@string/x2"
+            android:checked="true"
+            android:background="@drawable/buton_selector"
+            android:layout_weight="1"
+            android:textColor="@color/green_sample2"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            />
+
+        <ToggleButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOn="@string/x3"
+            android:textOff="@string/x3"
+            android:checked="true"
+            android:background="@drawable/buton_selector"
+            android:layout_weight="1"
+            android:textColor="@color/green_flat"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            />
+        <!--
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/x3"
             android:layout_weight="1"
             android:id="@+id/buttonX3"
+            android:background="@drawable/button_custom_learn_selector_pink"
+            android:textColor="@color/green_flat"
+            android:textStyle="bold"
+            android:textSize="25sp"
             />
-
+            -->
 
     </LinearLayout>
     <Space
@@ -109,6 +166,10 @@
             android:text="@string/x4"
             android:layout_weight="1"
             android:id="@+id/buttonX4"
+            android:background="@drawable/button_custom_learn_selector_pink"
+            android:textColor="@color/brown_sample1"
+            android:textStyle="bold"
+            android:textSize="25sp"
             />
         <Button
             android:layout_width="wrap_content"
@@ -116,6 +177,10 @@
             android:text="@string/x5"
             android:layout_weight="1"
             android:id="@+id/buttonX5"
+            android:background="@drawable/button_custom_learn_selector_pink"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="25sp"
             />
         <Button
             android:layout_width="wrap_content"
@@ -123,6 +188,10 @@
             android:text="@string/x6"
             android:layout_weight="1"
             android:id="@+id/buttonX6"
+            android:background="@drawable/button_custom_learn_selector_pink"
+            android:textColor="@color/purple_sample1"
+            android:textStyle="bold"
+            android:textSize="25sp"
             />
 
 
@@ -144,6 +213,10 @@
             android:text="@string/x7"
             android:layout_weight="1"
             android:id="@+id/buttonX7"
+            android:background="@drawable/button_custom_learn_selector_pink"
+            android:textColor="@color/blue_sample1"
+            android:textStyle="bold"
+            android:textSize="25sp"
             />
         <Button
             android:layout_width="wrap_content"
@@ -151,6 +224,10 @@
             android:text="@string/x8"
             android:layout_weight="1"
             android:id="@+id/buttonX8"
+            android:background="@drawable/button_custom_learn_selector_pink"
+            android:textColor="@color/yellow_sample1"
+            android:textStyle="bold"
+            android:textSize="25sp"
             />
         <Button
             android:layout_width="wrap_content"
@@ -158,6 +235,10 @@
             android:text="@string/x9"
             android:layout_weight="1"
             android:id="@+id/buttonX9"
+            android:background="@drawable/button_custom_learn_selector_pink"
+            android:textColor="@color/turkuaz_sample1"
+            android:textStyle="bold"
+            android:textSize="25sp"
             />
 
     </LinearLayout>
@@ -181,6 +262,10 @@
             android:layout_weight="1"
             android:textAllCaps="false"
             android:id="@+id/buttonBack"
+            android:background="@drawable/button_custom_learn_selector_pink"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="25sp"
             />
         <Button
             android:layout_width="wrap_content"
@@ -188,6 +273,10 @@
             android:text="@string/x10"
             android:layout_weight="1"
             android:id="@+id/buttonX10"
+            android:background="@drawable/button_custom_learn_selector_pink"
+            android:textColor="@color/green_sample1"
+            android:textStyle="bold"
+            android:textSize="25sp"
             />
         <Button
             android:layout_width="wrap_content"
@@ -196,6 +285,10 @@
             android:id="@+id/buttonStart"
             android:textAllCaps="false"
             android:layout_weight="1"
+            android:background="@drawable/button_custom_learn_selector_pink"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="25sp"
             />
 
     </LinearLayout>
