@@ -9,10 +9,29 @@
     <color name="white">#FFFFFF</color>
     <color name="medium_grey_color">#5e5e5e</color>
     <color name="turkuaz">#30D5C8</color>
-<<<<<<< HEAD
+
     <color name="purple_org">#800080</color>
     <color name="pink_org">#ff1493</color>
     <color name="orange_org">#ffa500</color>
-=======
->>>>>>> 7fe8ca26e4038e4060ba6372f2506ea139c88404
+    <color name="yellow_flat">#f1c40f</color>
+    <color name="yellow_flat2">#f39c12</color>
+    <color name="purple_flat">#8e44ad</color>
+    <color name="purple_flat2">#9b59b6</color>
+    <color name="turkuaz_flat">#1abc9c</color>
+    <color name="turkuaz_flat2">#16a085</color>
+    <color name="orange_dark_flat">#d35400</color>
+    <color name="blue_dark_flat">#2c3e50</color>
+    <color name="blue_soft_flat">#34495e</color>
+    <color name="green_flat">#27ae60</color>
+    <color name="green_org">#006600</color>
+    <color name="brown_sample1">#333300</color>
+    <color name="blue_sample1">#0000FF</color>
+    <color name="purple_sample1">#3333CC</color>
+    <color name="green_sample1">#66CC00</color>
+    <color name="yellow_sample1">#FFFF00</color>
+    <color name="orange_sample1">#FF3300</color>
+    <color name="red_sample1">#CC0000</color>
+    <color name="orange_sample2">#ff4800</color>
+    <color name="green_sample2">#00FF00</color>
+    <color name="turkuaz_sample1">#00CED1</color>
 </resources>
