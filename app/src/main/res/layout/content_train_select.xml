@@ -160,6 +160,19 @@
         android:layout_below="@+id/space1"
         android:orientation="horizontal">
 
+        <ToggleButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOn="@string/x4"
+            android:textOff="@string/x4"
+            android:checked="true"
+            android:background="@drawable/buton_selector"
+            android:layout_weight="1"
+            android:textColor="@color/brown_sample1"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            />
+        <!--
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -171,6 +184,20 @@
             android:textStyle="bold"
             android:textSize="25sp"
             />
+        -->
+        <ToggleButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOn="@string/x5"
+            android:textOff="@string/x5"
+            android:checked="true"
+            android:background="@drawable/buton_selector"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            />
+        <!--
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -182,6 +209,21 @@
             android:textStyle="bold"
             android:textSize="25sp"
             />
+        -->
+
+        <ToggleButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOn="@string/x4"
+            android:textOff="@string/x4"
+            android:checked="true"
+            android:background="@drawable/buton_selector"
+            android:layout_weight="1"
+            android:textColor="@color/purple_sample1"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            />
+        <!--
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -193,7 +235,7 @@
             android:textStyle="bold"
             android:textSize="25sp"
             />
-
+            -->
 
     </LinearLayout>
     <Space
@@ -207,6 +249,19 @@
         android:layout_height="50dp"
         android:layout_below="@+id/space2"
         android:orientation="horizontal">
+        <ToggleButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOn="@string/x7"
+            android:textOff="@string/x7"
+            android:checked="true"
+            android:background="@drawable/buton_selector"
+            android:layout_weight="1"
+            android:textColor="@color/blue_sample1"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            />
+        <!--
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -218,6 +273,20 @@
             android:textStyle="bold"
             android:textSize="25sp"
             />
+            -->
+        <ToggleButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOn="@string/x8"
+            android:textOff="@string/x8"
+            android:checked="true"
+            android:background="@drawable/buton_selector"
+            android:layout_weight="1"
+            android:textColor="@color/yellow_sample1"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            />
+        <!--
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -229,6 +298,20 @@
             android:textStyle="bold"
             android:textSize="25sp"
             />
+            -->
+        <ToggleButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOn="@string/x9"
+            android:textOff="@string/x9"
+            android:checked="true"
+            android:background="@drawable/buton_selector"
+            android:layout_weight="1"
+            android:textColor="@color/turkuaz_sample1"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            />
+        <!--
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -240,7 +323,7 @@
             android:textStyle="bold"
             android:textSize="25sp"
             />
-
+            -->
     </LinearLayout>
 
     <Space
@@ -267,6 +350,19 @@
             android:textStyle="bold"
             android:textSize="25sp"
             />
+        <ToggleButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOn="@string/x10"
+            android:textOff="@string/x10"
+            android:checked="true"
+            android:background="@drawable/buton_selector"
+            android:layout_weight="1"
+            android:textColor="@color/green_sample1"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            />
+        <!--
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -278,6 +374,8 @@
             android:textStyle="bold"
             android:textSize="25sp"
             />
+            -->
+
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
