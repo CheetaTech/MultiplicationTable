@@ -214,8 +214,8 @@
         <ToggleButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textOn="@string/x4"
-            android:textOff="@string/x4"
+            android:textOn="@string/x6"
+            android:textOff="@string/x6"
             android:checked="true"
             android:background="@drawable/buton_selector"
             android:layout_weight="1"
