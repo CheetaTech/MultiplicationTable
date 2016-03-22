@@ -10,21 +10,24 @@ import com.multiplationtable.R;
 import com.multiplationtable.TrainingActivity;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 import model.TrainingModel;
 
 public class TrainingController {
 
     public interface OnQuestionAskingListener{
-        void OnCorrectAnswer(Bitmap correctBitmap);
-        void OnWrongAnswer(Bitmap wrongBitmap);
+        void OnCorrectAnswer(Bitmap correctBitmap,int correctValScore);
+        void OnWrongAnswer(Bitmap wrongBitmap,int wrongValScore);
         void OnQuestion(String message);
     }
 
+    private Random random = null;
     private int firstInt =1 ;
     private int secondInt = 2;
     private int responseInt;
     Bitmap correctBitmap,wrongBitmap;
+    private int correctValueScore = 0,wrongValueScore =0;
     private OnQuestionAskingListener listener = null;
 
     private ArrayList<Integer> list = new ArrayList<Integer>();
@@ -32,6 +35,9 @@ public class TrainingController {
     public TrainingController()
     {
         trainingModel = new TrainingModel();
+        random = new Random();
+        correctValueScore = 0;
+        wrongValueScore = 0;
     }
     public TrainingController(Context context)
     {
@@ -40,6 +46,10 @@ public class TrainingController {
                 R.drawable.correct_image);
         wrongBitmap = BitmapFactory.decodeResource(context.getResources(),
                 R.drawable.wrong_image);
+
+        random = new Random();
+        correctValueScore = 0;
+        wrongValueScore = 0;
     }
 
     public void addNumber(String number)
@@ -58,8 +68,17 @@ public class TrainingController {
 
     public void askQuestion()
     {
-        this.firstInt += 1 ;
-        this.secondInt += 1 ;
+
+        int listSize = list.size();
+
+        Log.e("SIZE",""+listSize);
+        int randomlistIndex = random.nextInt(listSize);
+        this.firstInt = list.get(randomlistIndex);
+        this.secondInt = random.nextInt(10)+1;
+
+
+        //this.firstInt += 1 ;
+        //this.secondInt += 1 ;
         this.responseInt = this.firstInt * this.secondInt;
         listener.OnQuestion(String.valueOf(this.firstInt)+" x "+this.secondInt+" = ?");
     }
@@ -70,10 +89,12 @@ public class TrainingController {
         if(val == responseInt)
         {
             Log.e("RESPONSE","Cevap Doğrudur.");
-            listener.OnCorrectAnswer(correctBitmap);
+            correctValueScore += 1;
+            listener.OnCorrectAnswer(correctBitmap,correctValueScore);
         }else{
             Log.e("RESPONSE","Cevap Yanlıştır");
-            listener.OnWrongAnswer(wrongBitmap);
+            wrongValueScore += 1;
+            listener.OnWrongAnswer(wrongBitmap,wrongValueScore);
         }
         // burada son sorulan sorunun cevabı ile karşılaştırılacak
     }
@@ -85,6 +106,15 @@ public class TrainingController {
     public Bitmap getWrongBitmap()
     {
         return this.wrongBitmap;
+    }
+
+    public int getCorrectValueScore()
+    {
+        return this.correctValueScore;
+    }
+    public int getWrongValueScore()
+    {
+        return this.wrongValueScore;
     }
 
 }

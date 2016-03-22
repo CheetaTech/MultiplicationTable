@@ -47,7 +47,6 @@ public class TrainingActivity extends AppCompatActivity implements View.OnClickL
 
     ImageView answerImage = null;
     TrainingController controller = null;
-    private int correctValue = 0, wrongValue = 0;
     /**
      * İkon olarak doğru ise drawable icindeki correct_image
      * yanlışlarda ise wrong_image imgesi kullanılacaktır.
@@ -69,14 +68,16 @@ public class TrainingActivity extends AppCompatActivity implements View.OnClickL
         answerText = (TextView)findViewById(R.id.answerText);
         questionText = (TextView)findViewById(R.id.questionText);
         answerImage = (ImageView)findViewById(R.id.answerImageView);
-        ((TextView)findViewById(R.id.wrongValText)).setText(String.valueOf(wrongValue));
-        ((TextView)findViewById(R.id.correctValText)).setText(String.valueOf(correctValue));
+
 
 
 
         controller = new TrainingController(getApplicationContext());
+        controller.setSelectedList(SelectionController.getInstance().getNumberList());
         controller.setListener(this);
         controller.askQuestion();
+        ((TextView)findViewById(R.id.wrongValText)).setText(String.valueOf(controller.getWrongValueScore()));
+        ((TextView)findViewById(R.id.correctValText)).setText(String.valueOf(controller.getCorrectValueScore()));
     }
 
     @Override
@@ -135,27 +136,29 @@ public class TrainingActivity extends AppCompatActivity implements View.OnClickL
     }
 
     @Override
-    public void OnCorrectAnswer(Bitmap bitmap) {
-        answerImage.setVisibility(View.VISIBLE);
+    public void OnCorrectAnswer(Bitmap bitmap,int correctValueScore) {
+        //answerImage.setVisibility(View.VISIBLE);
+        ((TextView)findViewById(R.id.correctValText)).setText(String.valueOf(correctValueScore));
         answerImage.setImageBitmap(bitmap);
-        ((TextView)findViewById(R.id.correctValText)).setText(String.valueOf(correctValue++));
+
         answerText.setText("");
         trainingModel.clearKeyboard();
         controller.askQuestion();
-        answerImage.setVisibility(View.INVISIBLE);
+        //answerImage.setVisibility(View.INVISIBLE);
 
     }
 
     @Override
-    public void OnWrongAnswer(Bitmap bitmap) {
-        answerImage.setVisibility(View.VISIBLE);
+    public void OnWrongAnswer(Bitmap bitmap,int wrongValueScore) {
+        //answerImage.setVisibility(View.VISIBLE);
+
+        ((TextView) findViewById(R.id.wrongValText)).setText(String.valueOf(wrongValueScore));
         answerImage.setImageBitmap(bitmap);
-        ((TextView) findViewById(R.id.wrongValText)).setText(String.valueOf(wrongValue++));
 
         answerText.setText("");
         trainingModel.clearKeyboard();
         controller.askQuestion();
-        answerImage.setVisibility(View.INVISIBLE);
+        //answerImage.setVisibility(View.INVISIBLE);
         controller.askQuestion();
     }
 
