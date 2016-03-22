@@ -1,10 +1,13 @@
 package com.multiplationtable;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -13,12 +16,15 @@ import android.widget.TextView;
 
 import org.w3c.dom.Text;
 
+import java.util.ArrayList;
 import java.util.Observable;
 import java.util.Observer;
 
+import controller.SelectionController;
+import controller.TrainingController;
 import model.TrainingModel;
 
-public class TrainingActivity extends AppCompatActivity implements View.OnClickListener ,Observer{
+public class TrainingActivity extends AppCompatActivity implements View.OnClickListener ,Observer, TrainingController.OnQuestionAskingListener{
 
 
     int[] keyboardButtonId = new int[]{ R.id.one_btn,
@@ -36,8 +42,12 @@ public class TrainingActivity extends AppCompatActivity implements View.OnClickL
                                         };
 
     TextView answerText = null;
+    TextView questionText = null;
     TrainingModel trainingModel = null;
 
+    ImageView answerImage = null;
+    TrainingController controller = null;
+    private int correctValue = 0, wrongValue = 0;
     /**
      * İkon olarak doğru ise drawable icindeki correct_image
      * yanlışlarda ise wrong_image imgesi kullanılacaktır.
@@ -57,7 +67,16 @@ public class TrainingActivity extends AppCompatActivity implements View.OnClickL
             ((Button)findViewById(keyboardButtonId[i])).setOnClickListener(this);
         ((ImageView)findViewById(R.id.backImageView)).setOnClickListener(this);
         answerText = (TextView)findViewById(R.id.answerText);
-        answerText.setOnClickListener(this);
+        questionText = (TextView)findViewById(R.id.questionText);
+        answerImage = (ImageView)findViewById(R.id.answerImageView);
+        ((TextView)findViewById(R.id.wrongValText)).setText(String.valueOf(wrongValue));
+        ((TextView)findViewById(R.id.correctValText)).setText(String.valueOf(correctValue));
+
+
+
+        controller = new TrainingController(getApplicationContext());
+        controller.setListener(this);
+        controller.askQuestion();
     }
 
     @Override
@@ -99,7 +118,7 @@ public class TrainingActivity extends AppCompatActivity implements View.OnClickL
                 trainingModel.deleteKeyboardNumber();
                 break;
             case R.id.done_btn:
-
+                controller.doneControl(trainingModel.getTotalKeyboardString());
                 break;
             case R.id.backImageView:
                     onBackPressed();
@@ -113,5 +132,37 @@ public class TrainingActivity extends AppCompatActivity implements View.OnClickL
     @Override
     public void update(Observable observable, Object data) {
         answerText.setText(trainingModel.getTotalKeyboardString());
+    }
+
+    @Override
+    public void OnCorrectAnswer(Bitmap bitmap) {
+        answerImage.setVisibility(View.VISIBLE);
+        answerImage.setImageBitmap(bitmap);
+        ((TextView)findViewById(R.id.correctValText)).setText(String.valueOf(correctValue++));
+        answerText.setText("");
+        trainingModel.clearKeyboard();
+        controller.askQuestion();
+        answerImage.setVisibility(View.INVISIBLE);
+
+    }
+
+    @Override
+    public void OnWrongAnswer(Bitmap bitmap) {
+        answerImage.setVisibility(View.VISIBLE);
+        answerImage.setImageBitmap(bitmap);
+        ((TextView) findViewById(R.id.wrongValText)).setText(String.valueOf(wrongValue++));
+
+        answerText.setText("");
+        trainingModel.clearKeyboard();
+        controller.askQuestion();
+        answerImage.setVisibility(View.INVISIBLE);
+        controller.askQuestion();
+    }
+
+    @Override
+    public void OnQuestion(String message) {
+        if(questionText == null)
+            return;
+        questionText.setText(message);
     }
 }

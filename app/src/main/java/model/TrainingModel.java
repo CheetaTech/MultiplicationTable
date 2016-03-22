@@ -57,4 +57,8 @@ public class TrainingModel extends Observable{
     {
         return this.totalKeyboardString.length();
     }
+    public void clearKeyboard()
+    {
+        this.totalKeyboardString = "";
+    }
 }
