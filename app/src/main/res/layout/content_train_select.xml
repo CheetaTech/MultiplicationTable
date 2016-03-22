@@ -70,6 +70,7 @@
         android:orientation="horizontal">
 
         <ToggleButton
+            android:id="@+id/select_one_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textOn="@string/x1"
@@ -109,6 +110,7 @@
             -->
 
         <ToggleButton
+            android:id="@+id/select_two_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textOn="@string/x2"
@@ -122,6 +124,7 @@
             />
 
         <ToggleButton
+            android:id="@+id/select_three_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textOn="@string/x3"
@@ -161,6 +164,7 @@
         android:orientation="horizontal">
 
         <ToggleButton
+            android:id="@+id/select_four_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textOn="@string/x4"
@@ -186,6 +190,7 @@
             />
         -->
         <ToggleButton
+            android:id="@+id/select_five_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textOn="@string/x5"
@@ -212,6 +217,7 @@
         -->
 
         <ToggleButton
+            android:id="@+id/select_six_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textOn="@string/x6"
@@ -250,6 +256,7 @@
         android:layout_below="@+id/space2"
         android:orientation="horizontal">
         <ToggleButton
+            android:id="@+id/select_seven_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textOn="@string/x7"
@@ -275,6 +282,7 @@
             />
             -->
         <ToggleButton
+            android:id="@+id/select_eight_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textOn="@string/x8"
@@ -300,6 +308,7 @@
             />
             -->
         <ToggleButton
+            android:id="@+id/select_nine_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textOn="@string/x9"
@@ -351,6 +360,7 @@
             android:textSize="25sp"
             />
         <ToggleButton
+            android:id="@+id/select_ten_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textOn="@string/x10"

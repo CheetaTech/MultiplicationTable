@@ -15,14 +15,39 @@ public class TrainSelectActivity extends AppCompatActivity implements View.OnCli
      *  ilk acıldıgında butonları normal konumuna almamız gerekebilir.
      * */
 
+    int[] trainingSelectButtonId = new int[]{
+            R.id.select_one_btn,
+            R.id.select_two_btn,
+            R.id.select_three_btn,
+            R.id.select_four_btn,
+            R.id.select_five_btn,
+            R.id.select_six_btn,
+            R.id.select_eight_btn,
+            R.id.select_nine_btn,
+            R.id.select_ten_btn,
+            R.id.buttonBack,
+            R.id.buttonStart
+    };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.content_train_select);
+        init();
+
+
+        /*
         Button buttonStart = (Button)findViewById(R.id.buttonStart);
         Button buttonBack = (Button)findViewById(R.id.buttonBack);
         buttonStart.setOnClickListener(this);
         buttonBack.setOnClickListener(this);
+        */
+    }
+
+    private void init() {
+        for(int i = 0;i<trainingSelectButtonId.length;i++)
+            ((Button)findViewById(trainingSelectButtonId[i])).setOnClickListener(this);
+
     }
 
     @Override
@@ -33,10 +58,15 @@ public class TrainSelectActivity extends AppCompatActivity implements View.OnCli
                 onBackPressed();
                 break;
             case R.id.buttonStart:
+                checkButtons();
                 startActivity(new Intent(TrainSelectActivity.this,TrainingActivity.class));
                 break;
             default:
                 break;
         }
+    }
+
+    private void checkButtons() {
+
     }
 }
