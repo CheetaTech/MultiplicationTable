@@ -204,6 +204,7 @@
             android:textStyle="bold"
             android:textAllCaps="false"
             android:textColor="@color/white"
+            android:maxLength="3"
             />
     </LinearLayout>
     <LinearLayout
