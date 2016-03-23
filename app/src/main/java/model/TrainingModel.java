@@ -16,6 +16,9 @@ public class TrainingModel extends Observable{
 
     public void addKeyboardNumber(String addKeyboard)
     {
+        if(this.totalKeyboardString.length() >= 3)
+            return;
+
         int value = Integer.parseInt(addKeyboard);
         int originalValue = -1;
         try {

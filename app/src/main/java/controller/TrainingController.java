@@ -85,17 +85,26 @@ public class TrainingController {
 
     public void doneControl(String answer)
     {
-        int val = Integer.parseInt(answer);
-        if(val == responseInt)
+        int val = -1;
+        try {
+            val = Integer.parseInt(answer);
+        }catch (NumberFormatException e)
         {
-            Log.e("RESPONSE","Cevap Doğrudur.");
-            correctValueScore += 1;
-            listener.OnCorrectAnswer(correctBitmap,correctValueScore);
-        }else{
-            Log.e("RESPONSE","Cevap Yanlıştır");
-            wrongValueScore += 1;
-            listener.OnWrongAnswer(wrongBitmap,wrongValueScore);
+
         }
+
+        if(val != -1) {
+            if (val == responseInt) {
+                Log.e("RESPONSE", "Cevap Doğrudur.");
+                correctValueScore += 1;
+                listener.OnCorrectAnswer(correctBitmap, correctValueScore);
+            } else {
+                Log.e("RESPONSE", "Cevap Yanlıştır");
+                wrongValueScore += 1;
+                listener.OnWrongAnswer(wrongBitmap, wrongValueScore);
+            }
+        }
+
         // burada son sorulan sorunun cevabı ile karşılaştırılacak
     }
 
