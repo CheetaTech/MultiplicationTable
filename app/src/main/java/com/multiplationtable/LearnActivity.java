@@ -39,12 +39,16 @@ public class LearnActivity extends AppCompatActivity implements  View.OnClickLis
         controller = new LearningController(getApplicationContext());
         controller.setListener(this);
 
+        ((ImageView)findViewById(R.id.backImageViewLearn)).setOnClickListener(this);
         for (int i = 0;i< learnButtons.length; i++)
             ((Button)findViewById(learnButtons[i])).setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
+        if(v.getId() == R.id.backImageViewLearn)
+            onBackPressed();
+
         for(int i = 0;i<learnButtons.length;i++)
         {
             if(v.getId() == learnButtons[i])

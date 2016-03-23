@@ -1,6 +1,8 @@
 package controller;
 
 
+import android.util.Log;
+
 import java.util.ArrayList;
 
 public class SelectionController {
@@ -33,6 +35,12 @@ public class SelectionController {
     public ArrayList<Integer> getNumberList()
     {
         return this.list;
+    }
+    public void allNumbersAvailable()
+    {
+        this.list.clear();
+        for(int i = 1 ; i<=10;i++)
+            this.list.add(i);
     }
 
 }

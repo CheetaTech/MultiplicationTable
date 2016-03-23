@@ -72,14 +72,18 @@ public class TrainSelectActivity extends AppCompatActivity implements View.OnCli
 
     private void checkButtons() {
         SelectionController.getInstance().clear();
+        int allNumberAvailable = 0;
         for(int i = 0;i<buttons.length;i++)
         {
             if( ((ToggleButton)buttons[i]).isChecked() == false)
             {
                 Log.e("TOGGLE","Button id si "+ (i+1));
                 SelectionController.getInstance().add(i+1);
-            }
+            }else
+                allNumberAvailable +=1;
         }
+        if(allNumberAvailable == 10)
+            SelectionController.getInstance().allNumbersAvailable();
     }
 
     @Override

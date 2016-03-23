@@ -116,5 +116,8 @@ public class TrainingController {
     {
         return this.wrongValueScore;
     }
-
+    public String getCorrectStringValue()
+    {
+        return String.valueOf(this.firstInt)+" x "+String.valueOf(this.secondInt)+" = "+String.valueOf(this.responseInt);
+    }
 }

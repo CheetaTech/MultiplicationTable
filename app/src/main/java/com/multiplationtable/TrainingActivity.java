@@ -1,22 +1,17 @@
 package com.multiplationtable;
 
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
+import android.media.AudioManager;
+import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
-import java.util.ArrayList;
 import java.util.Observable;
 import java.util.Observer;
 
@@ -47,6 +42,12 @@ public class TrainingActivity extends AppCompatActivity implements View.OnClickL
 
     ImageView answerImage = null;
     TrainingController controller = null;
+    Handler handler = null;
+    Runnable runnable = null;
+    boolean toShow = false;
+    private MediaPlayer mediaPlayerCorrect = null;
+    private MediaPlayer mediaPlayerWrong = null;
+    int z = 0;
     /**
      * İkon olarak doğru ise drawable icindeki correct_image
      * yanlışlarda ise wrong_image imgesi kullanılacaktır.
@@ -54,6 +55,7 @@ public class TrainingActivity extends AppCompatActivity implements View.OnClickL
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setVolumeControlStream(AudioManager.STREAM_MUSIC);
         setContentView(R.layout.content_training);
         init();
     }
@@ -78,10 +80,29 @@ public class TrainingActivity extends AppCompatActivity implements View.OnClickL
         controller.askQuestion();
         ((TextView)findViewById(R.id.wrongValText)).setText(String.valueOf(controller.getWrongValueScore()));
         ((TextView)findViewById(R.id.correctValText)).setText(String.valueOf(controller.getCorrectValueScore()));
+
+        handler = new Handler();
+
+        runnable = new Runnable() {
+            @Override
+            public void run() {
+                answerText.setText("");
+                trainingModel.clearKeyboard();
+                controller.askQuestion();
+                answerImage.setVisibility(View.INVISIBLE);
+                toShow = false;
+            }
+        };
+
+        mediaPlayerCorrect = MediaPlayer.create(getApplicationContext(),R.raw.okvoice);
+        mediaPlayerWrong = MediaPlayer.create(getApplicationContext(),R.raw.wrongvoice);
     }
 
     @Override
     public void onClick(View v) {
+
+        if(this.toShow)
+            return;
         switch (v.getId())
         {
             case R.id.one_btn:
@@ -131,35 +152,46 @@ public class TrainingActivity extends AppCompatActivity implements View.OnClickL
     }
 
     @Override
+    protected void onDestroy() {
+        if(mediaPlayerWrong != null)
+        {
+            mediaPlayerWrong.release();
+            mediaPlayerWrong = null;
+        }
+        if(mediaPlayerCorrect != null){
+            mediaPlayerCorrect.release();
+            mediaPlayerCorrect = null;
+        }
+        super.onDestroy();
+    }
+
+    @Override
     public void update(Observable observable, Object data) {
         answerText.setText(trainingModel.getTotalKeyboardString());
     }
 
     @Override
     public void OnCorrectAnswer(Bitmap bitmap,int correctValueScore) {
-        //answerImage.setVisibility(View.VISIBLE);
+        toShow = true;
+        mediaPlayerCorrect.start();
+        answerImage.setVisibility(View.VISIBLE);
         ((TextView)findViewById(R.id.correctValText)).setText(String.valueOf(correctValueScore));
         answerImage.setImageBitmap(bitmap);
-
-        answerText.setText("");
-        trainingModel.clearKeyboard();
-        controller.askQuestion();
-        //answerImage.setVisibility(View.INVISIBLE);
-
+        handler.postDelayed(runnable, 1000);
     }
 
     @Override
     public void OnWrongAnswer(Bitmap bitmap,int wrongValueScore) {
-        //answerImage.setVisibility(View.VISIBLE);
-
+        toShow = true;
+        mediaPlayerWrong.start();
+        answerImage.setVisibility(View.VISIBLE);
+        if(questionText == null)
+            return;
+        questionText.setText(controller.getCorrectStringValue());
         ((TextView) findViewById(R.id.wrongValText)).setText(String.valueOf(wrongValueScore));
         answerImage.setImageBitmap(bitmap);
+        handler.postDelayed(runnable, 1000);
 
-        answerText.setText("");
-        trainingModel.clearKeyboard();
-        controller.askQuestion();
-        //answerImage.setVisibility(View.INVISIBLE);
-        controller.askQuestion();
     }
 
     @Override
