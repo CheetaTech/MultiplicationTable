@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.ToggleButton;
 
+import autosize.AutoResizeTextView;
 import controller.SelectionController;
 import controller.TrainingController;
 
@@ -51,6 +52,10 @@ public class TrainSelectActivity extends AppCompatActivity implements View.OnCli
         }
         ((ToggleButton) findViewById(R.id.buttonBack)).setOnClickListener(this);
         ((ToggleButton) findViewById(R.id.buttonStart)).setOnClickListener(this);
+
+
+
+
 
     }
 

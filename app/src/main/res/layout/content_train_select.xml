@@ -9,10 +9,11 @@
     <LinearLayout
         android:id="@+id/trainingLinearLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/mainLinear"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/spaceLinearLayout"
         android:orientation="horizontal"
         android:gravity="center"
+
         >
 
         <TextView
@@ -25,6 +26,19 @@
             android:textSize="80sp"
             android:textStyle="bold"
             android:id="@+id/trainingText" />
+
+        <!--
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/train"
+            android:textColor="@color/pink_org"
+            android:layout_marginTop="10dp"
+            android:textSize="80sp"
+            android:textStyle="bold"
+            android:id="@+id/trainingText" />
+        -->
 
         <!--
         <Button
@@ -47,7 +61,7 @@
         android:id="@+id/spaceLinearLayout"
         android:layout_width="match_parent"
         android:layout_height="30dp"
-        android:layout_below="@+id/trainingLinearLayout"
+        android:layout_above="@+id/firstLineLinearLayout"
         android:orientation="horizontal">
     </LinearLayout>
         <!--
@@ -66,7 +80,7 @@
         android:id="@+id/firstLineLinearLayout"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_below="@+id/spaceLinearLayout"
+        android:layout_above="@+id/space1"
         android:orientation="horizontal">
 
         <ToggleButton
@@ -156,15 +170,16 @@
 
     </LinearLayout>
     <Space
-        android:layout_below="@+id/firstLineLinearLayout"
         android:id="@+id/space1"
+        android:layout_above="@+id/secondLineLinearLayout"
         android:layout_width="match_parent"
         android:layout_height="5dp" />
     <LinearLayout
         android:id="@+id/secondLineLinearLayout"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_below="@+id/space1"
+
+        android:layout_above="@+id/space2"
         android:orientation="horizontal">
 
         <ToggleButton
@@ -252,11 +267,24 @@
             -->
 
     </LinearLayout>
+
+    <!-- Orta noktayı bulmaktadır.  -->
+    <LinearLayout
+        android:id="@+id/space2"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        >
+    </LinearLayout>
+    <!--
     <Space
         android:layout_below="@+id/secondLineLinearLayout"
         android:id="@+id/space2"
         android:layout_width="match_parent"
         android:layout_height="5dp" />
+    -->
     <LinearLayout
         android:id="@+id/thirdLineLinearLayout"
         android:layout_width="match_parent"
