@@ -81,6 +81,8 @@
             android:textColor="@color/orange_org"
             android:textStyle="bold"
             android:textSize="25sp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
             />
         <!--
         <Button
@@ -121,6 +123,7 @@
             android:textColor="@color/green_sample2"
             android:textStyle="bold"
             android:textSize="25sp"
+            android:layout_marginRight="10dp"
             />
 
         <ToggleButton
@@ -135,6 +138,7 @@
             android:textColor="@color/green_flat"
             android:textStyle="bold"
             android:textSize="25sp"
+            android:layout_marginRight="10dp"
             />
         <!--
         <Button
@@ -175,6 +179,8 @@
             android:textColor="@color/brown_sample1"
             android:textStyle="bold"
             android:textSize="25sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             />
         <!--
         <Button
@@ -201,6 +207,7 @@
             android:textColor="@color/white"
             android:textStyle="bold"
             android:textSize="25sp"
+            android:layout_marginRight="10dp"
             />
         <!--
         <Button
@@ -228,6 +235,7 @@
             android:textColor="@color/purple_sample1"
             android:textStyle="bold"
             android:textSize="25sp"
+            android:layout_marginRight="10dp"
             />
         <!--
         <Button
@@ -267,6 +275,8 @@
             android:textColor="@color/blue_sample1"
             android:textStyle="bold"
             android:textSize="25sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             />
         <!--
         <Button
@@ -293,6 +303,7 @@
             android:textColor="@color/yellow_sample1"
             android:textStyle="bold"
             android:textSize="25sp"
+            android:layout_marginRight="10dp"
             />
         <!--
         <Button
@@ -319,6 +330,7 @@
             android:textColor="@color/turkuaz_sample1"
             android:textStyle="bold"
             android:textSize="25sp"
+            android:layout_marginRight="10dp"
             />
         <!--
         <Button
@@ -347,10 +359,12 @@
         android:layout_below="@+id/space3"
         android:orientation="horizontal">
 
-        <Button
+        <ToggleButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/back"
+            android:textOn="@string/back"
+            android:textOff="@string/back"
             android:layout_weight="1"
             android:textAllCaps="false"
             android:id="@+id/buttonBack"
@@ -358,6 +372,8 @@
             android:textColor="@color/white"
             android:textStyle="bold"
             android:textSize="25sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             />
         <ToggleButton
             android:id="@+id/select_ten_btn"
@@ -371,6 +387,7 @@
             android:textColor="@color/green_sample1"
             android:textStyle="bold"
             android:textSize="25sp"
+            android:layout_marginRight="10dp"
             />
         <!--
         <Button
@@ -386,17 +403,20 @@
             />
             -->
 
-        <Button
+        <ToggleButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/start"
             android:id="@+id/buttonStart"
             android:textAllCaps="false"
             android:layout_weight="1"
+            android:textOn="@string/start"
+            android:textOff="@string/start"
             android:background="@drawable/button_custom_learn_selector_pink"
             android:textColor="@color/white"
             android:textStyle="bold"
             android:textSize="25sp"
+            android:layout_marginRight="10dp"
             />
 
     </LinearLayout>

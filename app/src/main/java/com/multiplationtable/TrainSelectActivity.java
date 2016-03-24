@@ -49,8 +49,8 @@ public class TrainSelectActivity extends AppCompatActivity implements View.OnCli
             buttons[i] = ((ToggleButton) findViewById(trainingSelectButtonId[i]));
             ((ToggleButton)buttons[i]).setOnCheckedChangeListener(this);
         }
-        ((Button) findViewById(R.id.buttonBack)).setOnClickListener(this);
-        ((Button) findViewById(R.id.buttonStart)).setOnClickListener(this);
+        ((ToggleButton) findViewById(R.id.buttonBack)).setOnClickListener(this);
+        ((ToggleButton) findViewById(R.id.buttonStart)).setOnClickListener(this);
 
     }
 

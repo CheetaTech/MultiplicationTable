@@ -27,7 +27,6 @@ public class TrainingModel extends Observable{
         { }
         catch (NumberFormatException e)
         { }
-
         int length = getTotalKeyboardLength();
         if(length == 0)
         {
