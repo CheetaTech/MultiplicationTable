@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/relativeLayout1"
+    android:id="@+id/relativeMainLayout"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@color/turkuaz"
     >
 
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gv4"
+        >
+    
     <LinearLayout
         android:id="@+id/learnLinearLayout"
         android:layout_width="match_parent"
@@ -60,6 +67,6 @@
             android:background="@drawable/button_custom_learn_selector_pink">
         </Button>
     </LinearLayout>
-
+    </RelativeLayout>
 
 </RelativeLayout>
