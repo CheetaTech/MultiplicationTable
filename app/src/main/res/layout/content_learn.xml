@@ -236,6 +236,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/showMath"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/secondLineLinearLayout"
@@ -244,8 +245,6 @@
             android:id="@+id/learnImageView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginRight="20dp"
-            android:layout_marginLeft="20dp"
             android:src="@drawable/first"/>
     </LinearLayout>
 </RelativeLayout>
