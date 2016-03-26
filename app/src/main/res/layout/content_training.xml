@@ -4,7 +4,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
 
-    android:background="@color/turkuaz"
+    android:background="@color/flat_green_sea"
     >
 
 
@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:background="@color/turkuaz"
+        android:background="@color/flat_green_sea"
 
         >
 

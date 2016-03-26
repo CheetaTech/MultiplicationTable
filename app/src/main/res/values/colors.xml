@@ -9,9 +9,10 @@
     <color name="white">#FFFFFF</color>
     <color name="medium_grey_color">#5e5e5e</color>
     <color name="turkuaz">#30D5C8</color>
-
+    9932cc
     <color name="purple_org">#800080</color>
-    <color name="pink_org">#ff1493</color>
+    <color name="pink_org">#cd00cd</color>
+    <color name="pink_org2">#cd1076</color>
     <color name="orange_org">#ffa500</color>
     <color name="yellow_flat">#f1c40f</color>
     <color name="yellow_flat2">#f39c12</color>
@@ -35,5 +36,10 @@
     <color name="green_sample2">#00FF00</color>
     <color name="turkuaz_sample1">#00CED1</color>
     <color name="background_yellow">#8B6914</color>
-    <color name="background_yellow2">#8B7500</color>
+    <color name="background_yellow2">#9932cc</color>
+    <color name="background_yellow333">#8B7500</color>
+    <color name="flat_peter_river">#3498DB</color>
+    <color name="flat_green_sea">#16A085</color>
+    <color name="flat_green_sea2">#2e8b57</color>
+    <color name="dark_green">#006400</color>
 </resources>

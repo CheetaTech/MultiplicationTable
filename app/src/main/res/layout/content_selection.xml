@@ -3,14 +3,14 @@
     android:id="@+id/relativeMainLayout"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@color/turkuaz"
+    android:background="@color/flat_green_sea"
     >
 
     <RelativeLayout
         android:id="@+id/relativeLayout1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/gv4"
+
         >
     
     <LinearLayout

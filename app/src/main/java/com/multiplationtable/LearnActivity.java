@@ -51,19 +51,25 @@ public class LearnActivity extends AppCompatActivity implements  View.OnClickLis
 
             @Override
             public void run() {
+                //controller.setLinearLayoutParams((LinearLayout.LayoutParams) myLayout.getLayoutParams());
+                controller.setLinearLayoutParams(myLayout.getHeight(), myLayout.getWidth());
                 Log.i("TEST", "Layout width : " + myLayout.getHeight() + " :: " + myLayout.getWidth());
-
+                if(myLayout.getHeight() > 0 && myLayout.getWidth() > 0)
+                    controller.setResizedImage(0);
             }
         });
-        final LinearLayout myLayout2 = (LinearLayout) findViewById(R.id.secondLineLinearLayout);
-        myLayout2.post(new Runnable() {
 
-            @Override
-            public void run() {
-                Log.i("TEST", "Layout width2 : " + myLayout2.getHeight() + " :: "+ myLayout2.getWidth());
 
-            }
-        });
+
+//        final LinearLayout myLayout2 = (LinearLayout) findViewById(R.id.secondLineLinearLayout);
+//        myLayout2.post(new Runnable() {
+//
+//            @Override
+//            public void run() {
+//                Log.i("TEST", "Layout width2 : " + myLayout2.getHeight() + " :: "+ myLayout2.getWidth());
+//
+//            }
+//        });
 
 //
 //        RelativeLayout relativeLayout = (RelativeLayout)findViewById(R.id.relativeLayout1);
@@ -115,7 +121,8 @@ public class LearnActivity extends AppCompatActivity implements  View.OnClickLis
         {
             if(v.getId() == learnButtons[i])
             {
-                controller.setImage(i);
+//                controller.setImage(i);
+                controller.setResizedImage(i);
                 break;
             }
         }
