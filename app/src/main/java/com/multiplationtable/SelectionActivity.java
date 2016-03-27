@@ -16,10 +16,25 @@ import android.widget.RelativeLayout;
 
 public class SelectionActivity extends AppCompatActivity  implements  View.OnClickListener{
 
+    public static Bitmap[] readedBitmaps = new Bitmap[10];
+    // bitmapleri okumak için kullanildi
+    int[] imageSource = new int[]{
+            R.drawable.ggfirst,
+            R.drawable.ggsecond,
+            R.drawable.ggthird,
+            R.drawable.ggfourth,
+            R.drawable.ggfifth,
+            R.drawable.ggsixth,
+            R.drawable.ggseventh,
+            R.drawable.ggeigth,
+            R.drawable.ggninth,
+            R.drawable.ggtenth
+    };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.content_selection);
+        readBitmaps();
 //        RelativeLayout relativeLayout = (RelativeLayout)findViewById(R.id.relativeLayout1);
 //        Drawable drawable = getResources().getDrawable(R.drawable.g1);
 //
@@ -35,6 +50,14 @@ public class SelectionActivity extends AppCompatActivity  implements  View.OnCli
         buttonTrain.setOnClickListener(this);
     }
 
+
+    private void readBitmaps() {
+        final BitmapFactory.Options options = new BitmapFactory.Options();
+        options.inSampleSize = 1;
+        for (int i = 0;i<readedBitmaps.length;i++)
+            readedBitmaps[i] = BitmapFactory.decodeResource(getApplicationContext().getResources(),imageSource[i],options);
+    }
+
     @Override
     public void onClick(View v) {
         switch (v.getId())
@@ -48,6 +71,5 @@ public class SelectionActivity extends AppCompatActivity  implements  View.OnCli
             default:
                 break;
         }
-
     }
 }

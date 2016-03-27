@@ -8,6 +8,7 @@ import android.graphics.Matrix;
 import android.widget.LinearLayout;
 
 import com.multiplationtable.R;
+import com.multiplationtable.SelectionActivity;
 
 public class LearningController {
 
@@ -20,6 +21,20 @@ public class LearningController {
     Bitmap[] images = new Bitmap[10];
     Bitmap[] resizedImages = new Bitmap[10];
     private int layoutWidth = -1, layoutHeigth = -1;
+
+    int[] imageSource = new int[]{
+            R.drawable.ggfirst,
+            R.drawable.ggsecond,
+            R.drawable.ggthird,
+            R.drawable.ggfourth,
+            R.drawable.ggfifth,
+            R.drawable.ggsixth,
+            R.drawable.ggseventh,
+            R.drawable.ggeigth,
+            R.drawable.ggninth,
+            R.drawable.ggtenth
+    };
+/*
     int[] imageSource = new int[]{
             R.drawable.pfirst,
             R.drawable.psecond,
@@ -32,6 +47,7 @@ public class LearningController {
             R.drawable.pninth,
             R.drawable.ptenth
     };
+    */
 //    int[] imageSource = new int[]{
 //            R.drawable.gnew1,
 //            R.drawable.gnu1,
@@ -54,19 +70,29 @@ public class LearningController {
     public LearningController(Context context)
     {
         this.context = context;
-
+        /*
         for (int i = 0;i<images.length;i++)
         {
             final BitmapFactory.Options options = new BitmapFactory.Options();
-            options.inSampleSize = 0;
+            options.inSampleSize = 1;
             //Bitmap bitmap = BitmapFactory.decodeFile(path,options);
             images[i] = BitmapFactory.decodeResource(context.getResources(),imageSource[i],options);
 
-        }
+        }*/
+        /*/
         if(this.layoutParams == null)
             return;
+        */
+
+        if(this.layoutHeigth == -1)
+            return;
+        if(this.layoutWidth == -1)
+            return;
+        if(SelectionActivity.readedBitmaps == null)
+            return;
+
         for (int i = 0;i<images.length;i++)
-            resizedImages[i] = getResizedBitmap(images[i],this.layoutHeigth,this.layoutWidth);
+            resizedImages[i] = getResizedBitmap(SelectionActivity.readedBitmaps[i],this.layoutHeigth,this.layoutWidth);
 
             //resizedImages[i] = getResizedBitmap(images[i],layoutParams.height,layoutParams.width);
 
@@ -130,7 +156,7 @@ public class LearningController {
         if(this.layoutWidth == -1)
             return;
         for (int i = 0;i<images.length;i++)
-            resizedImages[i] = getResizedBitmap(images[i],this.layoutHeigth,this.layoutWidth);
+            resizedImages[i] = getResizedBitmap(SelectionActivity.readedBitmaps[i],this.layoutHeigth,this.layoutWidth);
     }
 
     public Bitmap getResizedBitmap(Bitmap bm, int newHeight, int newWidth) {

@@ -17,7 +17,7 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="left"
-        android:src="@drawable/leftarrow3"/>
+        android:src="@drawable/leftarrow_white"/>
     </LinearLayout>
 
     <LinearLayout
@@ -73,31 +73,6 @@
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             />
-
-        <!--
-
-                <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="@string/x1"
-            android:id="@+id/buttonX1"
-            android:layout_weight="1"
-            />
-
-       <Button
-            android:id="@+id/buttonLearn"
-            android:layout_width="212dp"
-            android:layout_height="match_parent"
-            android:text="@string/learn"
-            android:background="@drawable/buton_selector"
-            android:textStyle="bold"
-            android:textAllCaps="false"
-            android:textSize="40dip"
-            android:textColor="@android:color/white"
-            >
-        </Button>
-        -->
 
         <Button
             android:layout_width="wrap_content"
@@ -249,6 +224,6 @@
             android:id="@+id/learnImageView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/pfirst"/>
+            android:src="@drawable/ggfirst"/>
     </LinearLayout>
 </RelativeLayout>

@@ -3,10 +3,8 @@
     android:id="@+id/relativeLayout1"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-
     android:background="@color/flat_green_sea"
     >
-
 
     <TableLayout
         android:id="@+id/tableLinearLayout"
@@ -14,7 +12,6 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:background="@color/flat_green_sea"
-
         >
 
         <LinearLayout
@@ -23,15 +20,15 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/one_to_three"
             android:orientation="horizontal"
-            android:weightSum="0"
-            >
+            android:weightSum="0" >
+
             <ImageView
                 android:id="@+id/backImageView"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:layout_gravity="left"
-                android:src="@drawable/leftarrow3"/>
+                android:src="@drawable/leftarrow_white"/>
             <Button
                 android:id="@+id/spaceButton2"
                 android:layout_width="wrap_content"
@@ -44,18 +41,6 @@
                 android:visibility="invisible"
                 />
 
-
-            <!--
-            <Button
-                android:id="@+id/five_btn"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="5"
-                android:textColor="@android:color/white"
-                android:background="@drawable/button_bg_selector"
-                android:textSize="25sp" />
-            -->
             <TextView
                 android:id="@+id/correctValText"
                 android:layout_width="wrap_content"
@@ -81,19 +66,6 @@
                 android:visibility="invisible"
                 />
 
-
-
-            <!--
-            <Button
-                android:id="@+id/six_btn"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="6"
-                android:textColor="@android:color/white"
-                android:background="@drawable/button_bg_selector"
-                android:textSize="25sp" />
-            -->
             <TextView
                 android:id="@+id/wrongValText"
                 android:layout_width="wrap_content"
@@ -109,50 +81,6 @@
         </LinearLayout>
 
     </TableLayout>
-
-
-    <!--
-    <LinearLayout
-        android:id="@+id/learnLinearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/mainLinear"
-        android:orientation="horizontal"
-        android:gravity="left"
-        android:background="@color/colorOurBlue"
-        android:weightSum="1"
-        >
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/leftarrow"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="15"
-             />
-
-
-        <Button
-            android:id="@+id/buttonLearn"
-            android:layout_width="212dp"
-            android:layout_height="match_parent"
-            android:text="@string/learn"
-            android:background="@drawable/buton_selector"
-            android:textStyle="bold"
-            android:textAllCaps="false"
-            android:textSize="40dip"
-            android:textColor="@android:color/white"
-            >
-        </Button>
-
-    </LinearLayout>
-    -->
-
-
-
 
     <LinearLayout
         android:id="@+id/answerLinearLayout"
@@ -177,11 +105,6 @@
             android:textAllCaps="false"
             />
     </LinearLayout>
-
-
-
-
-
 
     <LinearLayout
         android:id="@+id/answeringLinearLayout"
@@ -236,31 +159,11 @@
 
 
 
-<!--
-    <LinearLayout
-        android:id="@+id/extra"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/spaceLinearLayout"
-        android:layout_above="@+id/tblNumpad"
-        android:background="@color/colorAccent"
-        android:orientation="horizontal">
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_gravity="left"
-            android:src="@drawable/correct_im"/>
-    </LinearLayout>
--->
-
 
     <TableLayout
         android:id="@+id/tblNumpad"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         android:layout_alignParentBottom="true"
         >
 
@@ -270,8 +173,7 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_below="@+id/spaceLinearLayout"
-            android:orientation="horizontal">>
-
+            android:orientation="horizontal">
             <Button
                 android:id="@+id/one_btn"
                 android:layout_width="wrap_content"
@@ -419,9 +321,4 @@
                 android:textSize="18sp" />
         </LinearLayout>
     </TableLayout>
-
-
-
-
-
 </RelativeLayout>
