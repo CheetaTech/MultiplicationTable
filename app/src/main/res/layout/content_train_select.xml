@@ -13,8 +13,19 @@
         android:layout_above="@+id/spaceLinearLayout"
         android:orientation="horizontal"
         android:gravity="center"
-
         >
+        <!--
+        <autosize.AutoResizeTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/train"
+            android:textColor="@color/pink_org"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:id="@+id/trainingText" />
+            -->
+
 
         <TextView
             android:layout_width="wrap_content"

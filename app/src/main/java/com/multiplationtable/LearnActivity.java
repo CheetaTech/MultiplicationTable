@@ -58,58 +58,12 @@ public class LearnActivity extends AppCompatActivity implements  View.OnClickLis
                     controller.setResizedImage(0);
             }
         });
-
-
-
-//        final LinearLayout myLayout2 = (LinearLayout) findViewById(R.id.secondLineLinearLayout);
-//        myLayout2.post(new Runnable() {
-//
-//            @Override
-//            public void run() {
-//                Log.i("TEST", "Layout width2 : " + myLayout2.getHeight() + " :: "+ myLayout2.getWidth());
-//
-//            }
-//        });
-
-//
-//        RelativeLayout relativeLayout = (RelativeLayout)findViewById(R.id.relativeLayout1);
-//
-//        //LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) relativeLayout.getChildAt(6).getLayoutParams();
-//
-////        LinearLayout layout = (LinearLayout)findViewById(R.id.showMath);
-////        System.err.println("NOT: "+ relativeLayout.getChildCount() + " : "+layout.getHeight() + " : "+ layout.getWidth());
-//          System.err.println("NOT: " + relativeLayout.getChildAt(6).getWidth() + " : " + relativeLayout.getChildAt(6).getWidth());
-//        ViewGroup.LayoutParams params = relativeLayout.getChildAt(6).getLayoutParams();
-//        System.err.println("NOT2: " + params.width + " : " + params.height);
-
-
     }
-
-//    @Override
-//    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
-//    {
-//        super.onCreateView(inflater,container,savedInstanceState);
-//        View view = inflater.inflate(R.layout.content_learn, container, false);
-//        return view;
-//    }
 
     @Override
     public void onResume()
     {
         super.onResume();
-        System.out.println("PEKER");
-
-        //RelativeLayout relativeLayout = (RelativeLayout)findViewById(R.id.relativeLayout1);
-
-        //LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) relativeLayout.getChildAt(6).getLayoutParams();
-//
-//        LinearLayout layout = (LinearLayout)findViewById(R.id.showMath);
-////        System.err.println("NOT: "+ relativeLayout.getChildCount() + " : "+layout.getHeight() + " : "+ layout.getWidth());
-//        //System.err.println("NOT: " + relativeLayout.getChildAt(6).getWidth() + " : " + relativeLayout.getChildAt(6).getWidth());
-//        //ViewGroup.LayoutParams params = relativeLayout.getChildAt(6).getLayoutParams();
-//        System.err.println("NOT2: " + layout.getWidth() + " :: " + layout.getLayoutParams().width + " : " + layout.getLayoutParams().height + " :: "
-//        + layout.getHeight()
-//        );
     }
 
 
@@ -121,7 +75,6 @@ public class LearnActivity extends AppCompatActivity implements  View.OnClickLis
         {
             if(v.getId() == learnButtons[i])
             {
-//                controller.setImage(i);
                 controller.setResizedImage(i);
                 break;
             }

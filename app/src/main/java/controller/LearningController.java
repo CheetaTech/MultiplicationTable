@@ -70,38 +70,14 @@ public class LearningController {
     public LearningController(Context context)
     {
         this.context = context;
-        /*
-        for (int i = 0;i<images.length;i++)
-        {
-            final BitmapFactory.Options options = new BitmapFactory.Options();
-            options.inSampleSize = 1;
-            //Bitmap bitmap = BitmapFactory.decodeFile(path,options);
-            images[i] = BitmapFactory.decodeResource(context.getResources(),imageSource[i],options);
-
-        }*/
-        /*/
-        if(this.layoutParams == null)
-            return;
-        */
-
         if(this.layoutHeigth == -1)
             return;
         if(this.layoutWidth == -1)
             return;
         if(SelectionActivity.readedBitmaps == null)
             return;
-
         for (int i = 0;i<images.length;i++)
             resizedImages[i] = getResizedBitmap(SelectionActivity.readedBitmaps[i],this.layoutHeigth,this.layoutWidth);
-
-            //resizedImages[i] = getResizedBitmap(images[i],layoutParams.height,layoutParams.width);
-
-
-//        this.context = context;
-//        if(this.layoutParams == null)
-//            return;
-//        for (int i = 0;i<images.length;i++)
-//            images[i] = BitmapFactory.decodeResource(context.getResources(),imageSource[i]);
     }
     public void setListener(final OnSelectedImage selectedImage)
     {
@@ -130,14 +106,6 @@ public class LearningController {
         if(this.layoutWidth == -1)
             return;
         onSelectedImage.OnSelected(resizedImages[index]);
-
-//        if(images == null)
-//            return;
-//        if(onSelectedImage == null)
-//            return;
-//        if(layoutParams == null)
-//            return;
-//        onSelectedImage.OnSelected(resizedImages[index]);
     }
     public void setLinearLayoutParams(LinearLayout.LayoutParams params)
     {

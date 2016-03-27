@@ -19,7 +19,7 @@ public class SelectionActivity extends AppCompatActivity  implements  View.OnCli
     public static Bitmap[] readedBitmaps = new Bitmap[10];
     // bitmapleri okumak için kullanildi
     int[] imageSource = new int[]{
-            R.drawable.ggfirst,
+            R.drawable.ggfirst2,
             R.drawable.ggsecond,
             R.drawable.ggthird,
             R.drawable.ggfourth,
@@ -35,15 +35,6 @@ public class SelectionActivity extends AppCompatActivity  implements  View.OnCli
         super.onCreate(savedInstanceState);
         setContentView(R.layout.content_selection);
         readBitmaps();
-//        RelativeLayout relativeLayout = (RelativeLayout)findViewById(R.id.relativeLayout1);
-//        Drawable drawable = getResources().getDrawable(R.drawable.g1);
-//
-//        relativeLayout.setBackgroundDrawable(drawable);
-
-//        Bitmap bmImg = BitmapFactory.decodeStream();
-//        BitmapDrawable background = new BitmapDrawable(bmImg);
-//        relativeLayout.setBackgroundDrawable(background);
-
         Button buttonLearn = (Button)findViewById(R.id.buttonLearn);
         Button buttonTrain = (Button)findViewById(R.id.buttonTrain);
         buttonLearn.setOnClickListener(this);
