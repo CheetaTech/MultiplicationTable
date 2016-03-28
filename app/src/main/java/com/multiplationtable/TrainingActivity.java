@@ -173,7 +173,8 @@ public class TrainingActivity extends AppCompatActivity implements View.OnClickL
     @Override
     public void OnCorrectAnswer(Bitmap bitmap,int correctValueScore) {
         toShow = true;
-        mediaPlayerCorrect.start();
+        if(SelectionActivity.voiceState)
+            mediaPlayerCorrect.start();
         answerImage.setVisibility(View.VISIBLE);
         ((TextView)findViewById(R.id.correctValText)).setText(String.valueOf(correctValueScore));
         answerImage.setImageBitmap(bitmap);
@@ -183,7 +184,8 @@ public class TrainingActivity extends AppCompatActivity implements View.OnClickL
     @Override
     public void OnWrongAnswer(Bitmap bitmap,int wrongValueScore) {
         toShow = true;
-        mediaPlayerWrong.start();
+        if(SelectionActivity.voiceState)
+            mediaPlayerWrong.start();
         answerImage.setVisibility(View.VISIBLE);
         if(questionText == null)
             return;

@@ -12,7 +12,30 @@
         android:layout_height="match_parent"
         android:background="@drawable/backgroundgray1"
         >
-    
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/voiceButtonLayout"
+        android:orientation="horizontal"
+        android:gravity="right"
+        >
+        <ToggleButton
+            android:id="@+id/voiceButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOn=""
+            android:textOff=""
+            android:checked="false"
+            android:background="@drawable/buton_selector_voice"
+            android:layout_gravity="right"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            />
+
+
+    </LinearLayout>
+
     <LinearLayout
         android:id="@+id/learnLinearLayout"
         android:layout_width="match_parent"

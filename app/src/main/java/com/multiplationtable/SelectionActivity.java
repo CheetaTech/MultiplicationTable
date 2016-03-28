@@ -12,11 +12,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.RelativeLayout;
+import android.widget.ToggleButton;
 
-public class SelectionActivity extends AppCompatActivity  implements  View.OnClickListener{
+public class SelectionActivity extends AppCompatActivity  implements  View.OnClickListener, CompoundButton.OnCheckedChangeListener{
 
     public static Bitmap[] readedBitmaps = new Bitmap[10];
+    public static boolean voiceState = true; // if true voice on - else voice off
     // bitmapleri okumak için kullanildi
     int[] imageSource = new int[]{
             R.drawable.ggfirst2,
@@ -37,6 +40,7 @@ public class SelectionActivity extends AppCompatActivity  implements  View.OnCli
         readBitmaps();
         ((Button)findViewById(R.id.buttonLearn)).setOnClickListener(this);
         ((Button)findViewById(R.id.buttonTrain)).setOnClickListener(this);
+        ((ToggleButton)findViewById(R.id.voiceButton)).setOnCheckedChangeListener((CompoundButton.OnCheckedChangeListener) this);
       }
 
     private void readBitmaps() {
@@ -55,6 +59,24 @@ public class SelectionActivity extends AppCompatActivity  implements  View.OnCli
             break;
             case R.id.buttonTrain:
                 startActivity(new Intent(SelectionActivity.this, TrainSelectActivity.class));
+                break;
+            default:
+                break;
+        }
+    }
+
+    @Override
+    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+        switch (buttonView.getId()) {
+            case R.id.voiceButton:
+                if (isChecked){
+                    voiceState = false;
+                    System.err.println("IsChecked");
+                }
+                else{
+                    voiceState = true;
+                    System.err.println("Not Checked");
+                }
                 break;
             default:
                 break;
