@@ -67,6 +67,73 @@
         android:layout_above="@+id/space1"
         android:orientation="horizontal">
 
+        <!--
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:gravity="center">
+            <ToggleButton
+                android:id="@+id/select_one_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textOn="@string/x1"
+                android:textOff="@string/x1"
+                android:checked="true"
+                android:background="@drawable/buton_selector"
+
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:layout_weight="1">
+            <ToggleButton
+                android:id="@+id/select_two_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textOn="@string/x2"
+                android:textOff="@string/x2"
+                android:checked="true"
+                android:background="@drawable/buton_selector"
+
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                android:layout_marginRight="10dp"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:gravity="center">
+            <ToggleButton
+                    android:id="@+id/select_three_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textOn="@string/x3"
+                    android:textOff="@string/x3"
+                    android:checked="true"
+                    android:background="@drawable/buton_selector"
+
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="25sp"
+                    android:layout_marginRight="10dp"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+        -->
+
         <ToggleButton
             android:id="@+id/select_one_btn"
             android:layout_width="wrap_content"
@@ -112,6 +179,7 @@
             android:textSize="25sp"
             android:layout_marginRight="10dp"
             />
+
     </LinearLayout>
     <Space
         android:id="@+id/space1"
