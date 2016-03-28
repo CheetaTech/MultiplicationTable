@@ -29,7 +29,7 @@ public class TrainingController {
     Bitmap correctBitmap,wrongBitmap;
     private int correctValueScore = 0,wrongValueScore =0;
     private OnQuestionAskingListener listener = null;
-
+    private int holdValue = -1;
     private ArrayList<Integer> list = new ArrayList<Integer>();
     private TrainingModel trainingModel = null;
     public TrainingController()
@@ -70,16 +70,30 @@ public class TrainingController {
     {
 
         int listSize = list.size();
-
+        int randomlistIndex = -1 ;
         Log.e("SIZE",""+listSize);
-        int randomlistIndex = random.nextInt(listSize);
+        if(listSize>0)
+        {
+            if(holdValue!=-1)
+            {
+                while (true)
+                {
+                    randomlistIndex = random.nextInt(listSize);
+                    if(holdValue != randomlistIndex)
+                        break;
+                }
+            }
+            else
+                randomlistIndex = random.nextInt(listSize);
+        }
+        else
+            randomlistIndex = random.nextInt(listSize);
+
         this.firstInt = list.get(randomlistIndex);
         this.secondInt = random.nextInt(10)+1;
 
-
-        //this.firstInt += 1 ;
-        //this.secondInt += 1 ;
         this.responseInt = this.firstInt * this.secondInt;
+        holdValue = this.firstInt;
         listener.OnQuestion(String.valueOf(this.firstInt)+" x "+this.secondInt+" = ?");
     }
 
