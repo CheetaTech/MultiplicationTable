@@ -52,6 +52,7 @@ public class TrainSelectActivity extends AppCompatActivity implements View.OnCli
 
         //trainingLinearLayout
         //px = dp * (dpi / 160)
+        /*
         final LinearLayout myLayout = (LinearLayout) findViewById(R.id.trainingLinearLayout);
         myLayout.post(new Runnable() {
 
@@ -61,7 +62,7 @@ public class TrainSelectActivity extends AppCompatActivity implements View.OnCli
                 TextView textView = (TextView)findViewById(R.id.trainingText);
                 textView.setTextSize(DisplayUtils.convertPixelsToDp(myLayout.getHeight(), getApplicationContext()));
             }
-        });
+        });*/
         for (int i = 0; i < trainingSelectButtonId.length; i++)
         {
             buttons[i] = ((ToggleButton) findViewById(trainingSelectButtonId[i]));

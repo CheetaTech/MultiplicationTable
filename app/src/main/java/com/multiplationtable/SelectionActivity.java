@@ -35,12 +35,9 @@ public class SelectionActivity extends AppCompatActivity  implements  View.OnCli
         super.onCreate(savedInstanceState);
         setContentView(R.layout.content_selection);
         readBitmaps();
-        Button buttonLearn = (Button)findViewById(R.id.buttonLearn);
-        Button buttonTrain = (Button)findViewById(R.id.buttonTrain);
-        buttonLearn.setOnClickListener(this);
-        buttonTrain.setOnClickListener(this);
-    }
-
+        ((Button)findViewById(R.id.buttonLearn)).setOnClickListener(this);
+        ((Button)findViewById(R.id.buttonTrain)).setOnClickListener(this);
+      }
 
     private void readBitmaps() {
         final BitmapFactory.Options options = new BitmapFactory.Options();
