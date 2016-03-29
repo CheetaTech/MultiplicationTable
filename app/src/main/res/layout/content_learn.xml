@@ -233,6 +233,6 @@
             android:id="@+id/learnImageView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/ggfirst"/>
+            android:src="@drawable/ggfirst2"/>
     </LinearLayout>
 </RelativeLayout>
