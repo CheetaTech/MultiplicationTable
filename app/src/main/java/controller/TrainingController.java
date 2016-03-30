@@ -70,14 +70,14 @@ public class TrainingController {
         int listSize = list.size();
         int randomlistIndex = -1 ;
         Log.e("SIZE",""+listSize);
-        if(listSize>0)
+        if(listSize>1)
         {
             if(holdValue!=-1)
             {
                 while (true)
                 {
                     randomlistIndex = random.nextInt(listSize);
-                    if(holdValue != randomlistIndex)
+                    if(holdValue != list.get(randomlistIndex))
                         break;
                 }
             }
@@ -92,6 +92,7 @@ public class TrainingController {
 
         this.responseInt = this.firstInt * this.secondInt;
         holdValue = this.firstInt;
+        System.err.println("HoldValue: "+String.valueOf(holdValue) + " :randomlistIndex: "+ String.valueOf(randomlistIndex) );
         listener.OnQuestion(String.valueOf(this.firstInt)+" x "+this.secondInt+" = ?");
     }
 
