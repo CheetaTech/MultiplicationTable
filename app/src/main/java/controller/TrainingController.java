@@ -28,8 +28,10 @@ public class TrainingController {
     private int correctValueScore = 0,wrongValueScore =0;
     private OnQuestionAskingListener listener = null;
     private int holdValue = -1;
+    private int holdValueSecond = -1;
     private ArrayList<Integer> list = new ArrayList<Integer>();
     private TrainingModel trainingModel = null;
+    private boolean isSingle = false;
     public TrainingController()
     {
         trainingModel = new TrainingModel();
@@ -69,9 +71,11 @@ public class TrainingController {
 
         int listSize = list.size();
         int randomlistIndex = -1 ;
+        int randomlistIndexSecond = -1;
         Log.e("SIZE",""+listSize);
         if(listSize>1)
         {
+            isSingle = false;
             if(holdValue!=-1)
             {
                 while (true)
@@ -84,14 +88,34 @@ public class TrainingController {
             else
                 randomlistIndex = random.nextInt(listSize);
         }
-        else
+        else{
+            isSingle = true;
             randomlistIndex = random.nextInt(listSize);
+            if(holdValue == -1)
+            {
+                while (true)
+                {
+                    randomlistIndexSecond = random.nextInt(10)+1;
+                    if(holdValue != randomlistIndexSecond)
+                        break;
+                }
+            }
+            else
+                randomlistIndexSecond = random.nextInt(10)+1;
+
+        }
 
         this.firstInt = list.get(randomlistIndex);
-        this.secondInt = random.nextInt(10)+1;
+        if(isSingle)
+            this.secondInt = randomlistIndexSecond;
+        else
+            this.secondInt = random.nextInt(10)+1;
 
         this.responseInt = this.firstInt * this.secondInt;
-        holdValue = this.firstInt;
+        if(isSingle)
+            holdValue = randomlistIndexSecond;
+        else
+            holdValue = this.firstInt;
         System.err.println("HoldValue: "+String.valueOf(holdValue) + " :randomlistIndex: "+ String.valueOf(randomlistIndex) );
         listener.OnQuestion(String.valueOf(this.firstInt)+" x "+this.secondInt+" = ?");
     }
