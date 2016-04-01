@@ -13,6 +13,7 @@
         <activity
             android:name=".SelectionActivity"
             android:label="@string/title_activity_selection"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,14 +25,17 @@
         <activity
             android:name=".TrainingActivity"
             android:label="@string/title_activity_training"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name=".TrainSelectActivity"
             android:label="@string/title_activity_train_select"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name=".LearnActivity"
             android:label="@string/title_activity_learn"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"></activity>
 
     </application>
